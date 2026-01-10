@@ -1,0 +1,127 @@
+.container {
+    min-height: 70vh;
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 120px 1rem 0;
+    /* No bottom padding for attachment */
+    align-items: flex-end;
+    /* Push content to bottom */
+    position: relative;
+    overflow: visible;
+}
+
+.content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    /* Slight tuck to ensure joining */
+}
+
+.textContent {
+    flex: 1;
+    max-width: 540px;
+    padding-bottom: 80px;
+    /* Space from bottom while container is flex-end */
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    color: #1d1d1f;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #86868b;
+    margin-bottom: 32px;
+    text-align: justify;
+}
+
+.statFooter {
+    font-size: 1rem;
+    color: #1d1d1f;
+    line-height: 1.4;
+    border-top: 1px solid #d2d2d7;
+    padding-top: 24px;
+}
+
+.phoneWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Base the phone on the bottom */
+    position: relative;
+    z-index: 1;
+    transform: translateX(120px) translateY(-30px);
+    /* Moved right and up as requested */
+}
+
+.iphoneImage {
+    max-width: 65%;
+    /* Reduced size slightly more */
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 8rem 2rem 0;
+        /* Top 8rem, Side 2rem, Bottom 0 to lock */
+        align-items: flex-end;
+        /* Lock content to bottom */
+        min-height: auto;
+    }
+
+    .content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .textContent {
+        padding-bottom: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 2.3rem;
+        /* Slightly larger as requested */
+        line-height: 1.1;
+        margin-bottom: 2rem;
+        padding: 0 10px;
+    }
+
+    .description {
+        text-align: center;
+        font-size: 0.9rem;
+        /* Reduced size */
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+
+    .phoneWrapper {
+        transform: none;
+        margin-top: 40px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .iphoneImage {
+        max-width: 95%;
+        /* Increased size */
+        margin: 0 auto;
+    }
+}

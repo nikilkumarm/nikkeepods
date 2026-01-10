@@ -13,9 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NikkeePods - Unheard of Sound",
+  title: "NikkeePods",
   description: "Experience the next generation of wireless audio with NikkeePods.",
 };
+
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function RootLayout({
   children,
@@ -25,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

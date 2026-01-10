@@ -1,0 +1,185 @@
+.container {
+    min-height: 100vh;
+    background: #ffffff;
+    padding-top: 100px;
+    /* Navbar space */
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", sans-serif;
+    color: #1d1d1f;
+    padding-bottom: 6rem;
+}
+
+.mainWrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.title {
+    font-size: 56px;
+    font-weight: 600;
+    margin-bottom: 80px;
+    text-align: center;
+    letter-spacing: -0.005em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: flex-end;
+    /* Align bottom of headers */
+}
+
+/* Product Header Column */
+.productColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.imageWrapper {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 24px;
+}
+
+.productImage {
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.productName {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.16667;
+    margin-bottom: 0px;
+}
+
+.generation {
+    font-size: 14px;
+    color: #86868b;
+    margin-top: 4px;
+}
+
+.price {
+    font-size: 17px;
+    margin-top: 12px;
+    font-weight: 400;
+}
+
+/* ... existing styles ... */
+
+.buyButton {
+    background: #0071e3;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 980px;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 16px;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 28px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.buyButton:hover {
+    background: #0077ed;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
+}
+
+.imageWrapper {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 24px;
+    transition: transform 0.3s ease;
+}
+
+.imageWrapper:hover {
+    transform: translateY(-5px);
+}
+
+.productImage {
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+    /* Add depth */
+}
+
+/* Feature Rows Interactive */
+.featureRow {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 20px;
+    /* Reduced margin */
+    padding: 20px;
+    /* Add padding for hover area */
+    border-radius: 12px;
+    transition: background-color 0.2s ease;
+}
+
+.featureRow:hover {
+    background-color: #f5f5f7;
+    /* Subtle highlight on hover */
+}
+
+.featureValue {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.19048;
+    color: #1d1d1f;
+}
+
+
+.featureLabel {
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #1d1d1f;
+    font-weight: 400;
+    max-width: 200px;
+}
+
+.smallFeatureText {
+    font-size: 12px;
+    color: #86868b;
+    margin-top: 4px;
+}
+
+.sectionTitle {
+    grid-column: 1 / -1;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d2d2d7;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 10px;
+    color: #1d1d1f;
+}
+
+@media (max-width: 768px) {
+
+    .grid,
+    .featureRow {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .divider {
+        margin: 30px 0;
+    }
+}

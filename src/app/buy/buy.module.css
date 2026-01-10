@@ -1,0 +1,201 @@
+.container {
+    min-height: 100vh;
+    padding: 120px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f5f5f7;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", sans-serif;
+}
+
+.mainWrapper {
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 600;
+    color: #1d1d1f;
+    letter-spacing: -0.005em;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 17px;
+    color: #86868b;
+    font-weight: 400;
+}
+
+.productLayout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    background: #fff;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.imageSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 400px;
+}
+
+.productImage {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+    transition: transform 0.5s ease;
+}
+
+.productImage:hover {
+    transform: scale(1.02);
+}
+
+.detailsSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.newLabel {
+    color: #b64400;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.productName {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.1;
+    color: #1d1d1f;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 400;
+    color: #1d1d1f;
+    margin-bottom: 30px;
+}
+
+.divider {
+    height: 1px;
+    background: #d2d2d7;
+    margin: 30px 0;
+    width: 100%;
+}
+
+.featureList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 17px;
+    color: #1d1d1f;
+}
+
+.checkIcon {
+    color: #0071e3;
+    width: 18px;
+    height: 18px;
+}
+
+.addToBagBtn {
+    background: #0071e3;
+    color: #fff;
+    border: none;
+    border-radius: 980px;
+    padding: 18px 30px;
+    font-size: 17px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.addToBagBtn:hover {
+    background: #0077ed;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
+}
+
+.deliveryInfo {
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    color: #1d1d1f;
+}
+
+.deliveryItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.deliveryIcon {
+    width: 16px;
+    height: 16px;
+    color: #86868b;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 80px 1.5rem 40px;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .productLayout {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .imageSection {
+        min-height: 250px;
+    }
+
+    .productName {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .price {
+        text-align: center;
+    }
+
+    .deliveryInfo {
+        flex-direction: column;
+        gap: 12px;
+    }
+}

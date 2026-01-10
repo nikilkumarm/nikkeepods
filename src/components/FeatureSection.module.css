@@ -10,13 +10,22 @@
 }
 
 .title {
-    font-size: 3.5rem;
+    font-size: 5rem;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 4rem;
-    max-width: 700px;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
+    margin-bottom: 5rem;
+    max-width: 900px;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+}
+
+
+.highlight {
+    background: linear-gradient(90deg, #2997ff 0%, #9e00ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .grid {
@@ -28,11 +37,11 @@
 }
 
 .card {
-    background: #111;
     border-radius: 30px;
-    padding: 40px;
+    padding: 60px 60px 40px;
+    /* Reduced bottom padding to move text down */
     height: 500px;
-    background-size: cover;
+    background-size: 140%;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
@@ -40,11 +49,12 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    transition: transform 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .card:hover {
-    transform: scale(1.02);
+    transform: translateY(-10px);
+    background-size: 150%;
 }
 
 .cardContent {
@@ -53,19 +63,23 @@
 }
 
 .cardTitle {
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 1.3rem;
+    font-weight: 700;
     margin-bottom: 0.5rem;
-    background: linear-gradient(180deg, #fff 0%, #aaa 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .cardText {
-    color: #ccc;
-    font-size: 1.1rem;
+    color: #eeeeee;
+    /* Brighter for readability */
+    font-size: 0.8em;
     font-weight: 400;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-align: justify;
 }
 
 /* Overlay */
@@ -76,5 +90,29 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 40%, transparent 100%);
+    z-index: 1;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 20px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        height: 450px;
+        padding: 40px 30px;
+        background-size: cover;
+        background-position: center;
+    }
 }

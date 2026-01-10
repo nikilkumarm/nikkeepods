@@ -1,15 +1,18 @@
-import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import FeatureSection from '@/components/FeatureSection';
-import Footer from '@/components/Footer';
+import AdaptiveAudio from '@/components/AdaptiveAudio';
+import HeartRateSection from '@/components/FindMySection';
+
+import ValuesSection from '@/components/ValuesSection';
 
 export default function Home() {
   return (
-    <main>
-      <Navbar />
+    <main style={{ position: 'relative' }}>
       <Hero />
+      <AdaptiveAudio />
       <FeatureSection />
-      <Footer />
+      <HeartRateSection />
+      <ValuesSection />
     </main>
   );
 }

@@ -1,8 +1,183 @@
 .footer {
-    padding: 3rem 0;
-    background: #050505;
-    color: #666;
-    text-align: center;
-    font-size: 0.75rem;
-    border-top: 1px solid #1a1a1a;
+    background: #f5f5f7;
+    color: #6e6e73;
+    padding: 0 22px;
+    font-size: 12px;
+    line-height: 1.33337;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 0 21px;
+}
+
+/* Notes section */
+.notes {
+    padding: 17px 0 11px;
+    border-bottom: 1px solid #d2d2d7;
+    margin-bottom: 20px;
+}
+
+.notes p {
+    margin-bottom: 0.8em;
+}
+
+/* Directory section */
+.directory {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+
+.directoryColumn {
+    flex: 1;
+    min-width: 150px;
+}
+
+.directorySection {
+    padding-bottom: 20px;
+}
+
+.directoryTitle {
+    color: #1d1d1f;
+    font-weight: 600;
+    margin-bottom: 0.8em;
+    font-size: 12px;
+}
+
+.directoryList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.directoryItem {
+    margin-bottom: 0.5em;
+}
+
+.directoryLink {
+    color: #424245;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.directoryLink:hover {
+    color: #1d1d1f;
+    text-decoration: underline;
+}
+
+/* Bottom section */
+.bottom {
+    padding: 34px 0 21px;
+}
+
+.moreWays {
+    margin-bottom: 7px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d2d2d7;
+}
+
+.blueLink {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.blueLink:hover {
+    text-decoration: underline;
+}
+
+.legal {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+.copyright {
+    margin-right: 30px;
+    color: #6e6e73;
+}
+
+.legalLinks {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.legalLinkItem {
+    position: relative;
+    margin-right: 14px;
+    padding-right: 14px;
+}
+
+.legalLinkItem:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 2px;
+    bottom: 2px;
+    width: 1px;
+    background-color: #d2d2d7;
+}
+
+.legalLink {
+    color: #424245;
+    text-decoration: none;
+}
+
+.legalLink:hover {
+    color: #1d1d1f;
+    text-decoration: underline;
+}
+
+.location {
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .directory {
+        flex-direction: column;
+    }
+
+    .directoryColumn {
+        width: 100%;
+        border-bottom: 1px solid #d2d2d7;
+    }
+
+    .directoryTitle {
+        padding: 10px 0;
+        margin-bottom: 0;
+    }
+
+    .directorySection {
+        padding-bottom: 10px;
+    }
+
+    .legal {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .legalLinks {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .legalLinkItem {
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    .legalLinkItem::after {
+        display: none;
+    }
+
+    .location {
+        margin-left: 0;
+        margin-top: 15px;
+    }
 }
