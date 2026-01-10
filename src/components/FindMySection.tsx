@@ -40,7 +40,7 @@ export default function FindMySection() {
                 <div className={styles.phoneWrapper}>
                     <motion.div style={{ opacity: opacityPhone, y: yPhone }}>
                         <img
-                            src="/find-my-iphone.png"
+                            src="/nikkeepods.github.io/find-my-iphone.png"
                             alt="iPhone showing Find My interface"
                             className={styles.iphoneImage}
                         />

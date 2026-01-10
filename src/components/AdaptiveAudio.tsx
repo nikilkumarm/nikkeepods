@@ -44,7 +44,7 @@ export default function AdaptiveAudio() {
 
                     <motion.div style={{ scale }} className={styles.podContainer}>
                         <img
-                            src="/airpod-internal.png"
+                            src="/nikkeepods.github.io/airpod-internal.png"
                             alt="AirPod Pro Internal View"
                             className={styles.podImage}
                         />

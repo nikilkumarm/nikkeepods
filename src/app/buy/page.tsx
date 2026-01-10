@@ -14,7 +14,7 @@ export default function BuyPage() {
                     {/* Left: Image */}
                     <div className={styles.imageSection}>
                         <img
-                            src="/airpods-pro-3.png"
+                            src="/nikkeepods.github.io/airpods-pro-3.png"
                             alt="NikkeePods Pro 3"
                             className={styles.productImage}
                             style={{ transform: 'scale(1.1)' }}

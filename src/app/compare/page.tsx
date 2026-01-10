@@ -16,7 +16,7 @@ export default function ComparePage() {
                         {/* NikkeePods Pro 3 */}
                         <div className={styles.productColumn}>
                             <div className={styles.imageWrapper}>
-                                <img src="/airpods-pro-3.png" alt="NikkeePods Pro 3" className={styles.productImage} style={{ transform: 'scale(0.9)', transformOrigin: 'bottom' }} />
+                                <img src="/nikkeepods.github.io/airpods-pro-3.png" alt="NikkeePods Pro 3" className={styles.productImage} style={{ transform: 'scale(0.9)', transformOrigin: 'bottom' }} />
                             </div>
                             <h2 className={styles.productName}>NikkeePods Pro 3</h2>
                             <span className={styles.generation}>Active Noise Cancellation</span>
@@ -27,7 +27,7 @@ export default function ComparePage() {
                         {/* NikkeePods Pro 2 */}
                         <div className={styles.productColumn}>
                             <div className={styles.imageWrapper}>
-                                <img src="/airpods-pro-2.png" alt="NikkeePods Pro 2" className={styles.productImage} style={{ transform: 'scale(0.95)', transformOrigin: 'bottom' }} />
+                                <img src="/nikkeepods.github.io/airpods-pro-2.png" alt="NikkeePods Pro 2" className={styles.productImage} style={{ transform: 'scale(0.95)', transformOrigin: 'bottom' }} />
                             </div>
                             <h2 className={styles.productName}>NikkeePods Pro 2</h2>
                             <span className={styles.generation}>Active Noise Cancellation</span>
@@ -38,7 +38,7 @@ export default function ComparePage() {
                         {/* NikkeePods 4 (No ANC) */}
                         <div className={styles.productColumn}>
                             <div className={styles.imageWrapper}>
-                                <img src="/airpods-2.png" alt="NikkeePods 4" className={styles.productImage} style={{ transform: 'scale(1.0)', transformOrigin: 'bottom' }} />
+                                <img src="/nikkeepods.github.io/airpods-2.png" alt="NikkeePods 4" className={styles.productImage} style={{ transform: 'scale(1.0)', transformOrigin: 'bottom' }} />
                             </div>
                             <h2 className={styles.productName}>NikkeePods 4</h2>
                             <span className={styles.generation}>&nbsp;</span>
