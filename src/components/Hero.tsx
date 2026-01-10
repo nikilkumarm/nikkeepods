@@ -78,13 +78,13 @@ export default function Hero() {
                 <div className={styles.imageContainer}>
                     <motion.img
                         style={{ x: finalXLeft, opacity: finalOpacity, scale: finalScale }}
-                        src="/hero-pods-transparent-left.png"
+                        src="/nikkeepods.github.io/hero-pods-transparent-left.png"
                         alt="Left Pod"
                         className={styles.podLeft}
                     />
                     <motion.img
                         style={{ x: finalXRight, opacity: finalOpacity, scale: finalScale }}
-                        src="/hero-pods-transparent-right.png"
+                        src="/nikkeepods.github.io/hero-pods-transparent-right.png"
                         alt="Right Pod"
                         className={styles.podRight}
                     />
