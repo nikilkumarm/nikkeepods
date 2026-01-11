@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "NikkeePods",
   description: "Experience the next gen audio with NikkeePods.",
   icons: {
-    icon: '/favicon.ico',
+    icon: '/favicon.png',
   },
 };
 
