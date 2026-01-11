@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/nikkeepods.github.io",
+  basePath: "/nikkeepods",
 };
 
 export default nextConfig;
