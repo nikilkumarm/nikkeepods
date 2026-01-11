@@ -84,6 +84,40 @@ export default function BuyPage() {
                         </div>
                     </motion.div>
                 </div>
+
+                {/* Other Products */}
+                <motion.div
+                    className={styles.otherProductsGrid}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                >
+                    {/* NikkeePods Pro 2 */}
+                    <div className={styles.otherProductCard}>
+                        <img
+                            src="/nikkeepods/airpods-pro-2.png"
+                            alt="NikkeePods Pro 2"
+                            className={styles.smallProductImage}
+                        />
+                        <h3 className={styles.otherProductName}>NikkeePods Pro 2</h3>
+                        <p className={styles.otherProductFeature}>Active Noise Cancellation</p>
+                        <p className={styles.otherProductPrice}>$179</p>
+                        <button className={styles.smallBuyBtn}>Buy</button>
+                    </div>
+
+                    {/* NikkeePods 4 */}
+                    <div className={styles.otherProductCard}>
+                        <img
+                            src="/nikkeepods/airpods-2.png"
+                            alt="NikkeePods 4"
+                            className={styles.smallProductImage}
+                        />
+                        <h3 className={styles.otherProductName}>NikkeePods 4</h3>
+                        <p className={styles.otherProductFeature}>&nbsp;</p>
+                        <p className={styles.otherProductPrice}>$129</p>
+                        <button className={styles.smallBuyBtn}>Buy</button>
+                    </div>
+                </motion.div>
             </div>
         </div>
     );
