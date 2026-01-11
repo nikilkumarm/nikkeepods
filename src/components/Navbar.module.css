@@ -69,12 +69,30 @@
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
     .links {
-        display: none;
+        display: flex;
+        gap: 12px;
+    }
+
+    .link {
+        font-size: 11px;
+    }
+
+    .buyBtn {
+        padding: 4px 10px;
+        font-size: 10px;
     }
 
     .menuBtn {
-        display: block;
+        display: none;
+    }
+
+    .logo {
+        font-size: 1.1rem;
     }
 }
 
