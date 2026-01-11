@@ -26,7 +26,7 @@ export default function FeatureSection() {
                 >
                     <div className={styles.cardContent}>
                         <h3 className={styles.cardTitle}>Active Noise Cancellation</h3>
-                        <p className={styles.cardText} style={{ whiteSpace: 'nowrap', marginTop: '0.5rem' }}>1.5x increase with NikkeePods Pro 3</p>
+                        <p className={styles.cardText} style={{ whiteSpace: 'nowrap', marginTop: '0.2rem', marginBottom: '0.2rem' }}>1.5x increase with NikkeePods Pro 3</p>
                     </div>
                 </motion.div>
 
