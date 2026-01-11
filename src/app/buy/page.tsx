@@ -1,4 +1,4 @@
-"use client";
+import { motion } from 'framer-motion';
 import styles from './buy.module.css';
 
 export default function BuyPage() {
@@ -6,23 +6,44 @@ export default function BuyPage() {
         <div className={styles.container}>
             <div className={styles.mainWrapper}>
                 <div className={styles.header}>
-                    <h1 className={styles.title}>Buy NikkeePods Pro</h1>
-                    <p className={styles.subtitle}>Get 6 months of Nikkee Music free with your purchase.*</p>
+                    <motion.h1
+                        className={styles.title}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        Buy NikkeePods Pro
+                    </motion.h1>
+                    <motion.p
+                        className={styles.subtitle}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                    >
+                        Get 6 months of Nikkee Music free with your purchase.*
+                    </motion.p>
                 </div>
 
                 <div className={styles.productLayout}>
                     {/* Left: Image */}
                     <div className={styles.imageSection}>
-                        <img
+                        <motion.img
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1.1 }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
                             src="/nikkeepods/airpods-pro-3.png"
                             alt="NikkeePods Pro 3"
                             className={styles.productImage}
-                            style={{ transform: 'scale(1.1)' }}
                         />
                     </div>
 
                     {/* Right: Details */}
-                    <div className={styles.detailsSection}>
+                    <motion.div
+                        className={styles.detailsSection}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
+                    >
                         <span className={styles.newLabel}>New</span>
                         <h2 className={styles.productName}>NikkeePods Pro 3</h2>
                         <p className={styles.price}>$249.00</p>
@@ -30,18 +51,22 @@ export default function BuyPage() {
                         <div className={styles.divider}></div>
 
                         <ul className={styles.featureList}>
-                            <li className={styles.featureItem}>
-                                <svg className={styles.checkIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
-                                Personalized Spatial Audio
-                            </li>
-                            <li className={styles.featureItem}>
-                                <svg className={styles.checkIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
-                                Active Noise Cancellation
-                            </li>
-                            <li className={styles.featureItem}>
-                                <svg className={styles.checkIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
-                                Dust, sweat, and water resistant
-                            </li>
+                            {[
+                                "Personalized Spatial Audio",
+                                "Active Noise Cancellation",
+                                "Dust, sweat, and water resistant"
+                            ].map((feature, i) => (
+                                <motion.li
+                                    key={i}
+                                    className={styles.featureItem}
+                                    initial={{ opacity: 0, x: -10 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: 0.5 + (i * 0.1) }}
+                                >
+                                    <svg className={styles.checkIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                                    {feature}
+                                </motion.li>
+                            ))}
                         </ul>
 
                         <button className={styles.addToBagBtn}>Add to Bag</button>
@@ -56,7 +81,7 @@ export default function BuyPage() {
                                 <span>Free Returns</span>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>
