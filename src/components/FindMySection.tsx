@@ -33,7 +33,7 @@ export default function FindMySection() {
                         Easily locate the exact place you left your NikkeePods Pro. A new generation of Ultra Wideband technology in the Charging Case increases the distance for Precision Finding by 1.5x. And with a built-in speaker in the case, you'll be able to find your NikkeePods no matter how deep in the couch cushions they are.
                     </p>
                     <div className={styles.statFooter}>
-                        <strong>1.5x increase</strong> with NikkeePods Pro 3
+                        <strong>1.5x increase </strong> with NikkeePods Pro 3<br /><br />
                     </div>
                 </motion.div>
 
