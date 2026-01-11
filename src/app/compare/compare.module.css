@@ -173,66 +173,93 @@
 
 @media (max-width: 768px) {
     .mainWrapper {
-        overflow-x: auto;
-        padding-bottom: 20px;
-        -webkit-overflow-scrolling: touch;
-        /* Scrollbar styling for cleaner look */
-        scrollbar-width: none;
-        /* Firefox */
-        -ms-overflow-style: none;
-        /* IE and Edge */
-    }
-
-    .mainWrapper::-webkit-scrollbar {
-        display: none;
+        padding: 0 10px;
     }
 
     .title {
-        font-size: 32px;
-        margin-bottom: 40px;
-        position: sticky;
-        left: 0;
+        font-size: 28px;
+        margin-bottom: 30px;
+        position: static;
         width: 100%;
-        padding: 0 20px;
+        padding: 0;
     }
 
     .grid,
     .featureRow {
-        min-width: 700px;
-        /* Force horizontal scroll */
+        min-width: 0;
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        padding-right: 20px;
-        /* Padding for last item */
+        gap: 8px;
+        padding-right: 0;
     }
 
     .divider {
-        min-width: 700px;
-        margin: 30px 0;
+        min-width: 0;
+        margin: 20px 0;
     }
 
     .sectionTitle {
-        min-width: 700px;
-        font-size: 20px;
-        margin-top: 40px;
-        position: sticky;
-        left: 0;
+        min-width: 0;
+        font-size: 18px;
+        margin-top: 30px;
+        position: static;
+        padding-bottom: 15px;
+    }
+
+    /* Product Header Adjustments */
+    .imageWrapper {
+        height: 80px;
+        margin-bottom: 12px;
     }
 
     .productName {
-        font-size: 18px;
+        font-size: 12px;
+        line-height: 1.2;
+        min-height: 2.4em;
     }
 
-    .imageWrapper {
-        height: 140px;
+    .generation {
+        font-size: 9px;
+        display: none;
+        /* Hide generation text to save vertical space/clutter */
     }
 
     .price {
-        font-size: 15px;
+        font-size: 13px;
+        margin-top: 8px;
     }
 
     .buyButton {
-        padding: 6px 14px;
+        padding: 4px 10px;
+        font-size: 10px;
+        margin-top: 8px;
+        min-width: 0;
+    }
+
+    /* Feature Row Adjustments */
+    .featureRow {
+        padding: 10px 0;
+        gap: 8px;
+    }
+
+    .featureValue {
         font-size: 11px;
+        line-height: 1.2;
+    }
+
+    .featureLabel {
+        font-size: 10px;
+        line-height: 1.3;
+    }
+
+    .smallFeatureText {
+        font-size: 9px;
+        display: none;
+        /* Hide detail text for cleaner table */
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 6px;
     }
 }
