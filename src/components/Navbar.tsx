@@ -9,7 +9,7 @@ export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const pathname = usePathname();
-    const isLightPage = pathname !== '/' && pathname !== '/tech-specs';
+    const isLightPage = pathname !== '/';
 
     useEffect(() => {
         const handleScroll = () => {
