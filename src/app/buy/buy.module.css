@@ -163,78 +163,49 @@
 
 @media (max-width: 768px) {
     .container {
-        padding: 80px 1.5rem 40px;
+        padding: 80px 16px 40px;
     }
 
-    .header {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-    .title {
-        font-size: 28px;
-    }
-
-    .productLayout {
-        grid-template-columns: 1fr;
-        padding: 30px 20px;
-        gap: 30px;
-    }
-
-    .imageSection {
-        min-height: 250px;
-    }
-
-    .productName {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .price {
-        text-align: center;
-    }
-
-    .deliveryInfo {
-        flex-direction: column;
-        gap: 12px;
-    }
+    /* ... other existing styles ... */
 
     .otherProductsGrid {
         grid-template-columns: 1fr 1fr;
-        gap: 12px;
-        margin-top: 40px;
+        gap: 10px;
+        margin-top: 30px;
     }
 
     .otherProductCard {
-        padding: 24px 16px;
+        padding: 20px 10px;
         border-radius: 16px;
     }
 
     .smallProductImage {
-        height: 120px;
-        max-width: 140px;
-        margin-bottom: 20px;
+        height: 100px;
+        width: 100%;
+        max-width: 120px;
+        margin-bottom: 15px;
     }
 
     .otherProductName {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 1.2;
+        margin-bottom: 4px;
     }
 
     .otherProductFeature {
-        font-size: 11px;
-        margin-bottom: 12px;
+        font-size: 10px;
+        margin-bottom: 8px;
     }
 
     .otherProductPrice {
-        font-size: 15px;
-        margin-bottom: 16px;
+        font-size: 14px;
+        margin-bottom: 12px;
     }
 
     .smallBuyBtn {
-        padding: 8px 16px;
-        font-size: 12px;
-        min-width: 80px;
+        padding: 6px 14px;
+        font-size: 11px;
+        min-width: 60px;
     }
 }
 
