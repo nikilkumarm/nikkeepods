@@ -25,7 +25,7 @@
 .textContent {
     flex: 1;
     max-width: 540px;
-    padding-bottom: 80px;
+    padding-bottom: 180px;
     /* Space from bottom while container is flex-end */
 }
 
