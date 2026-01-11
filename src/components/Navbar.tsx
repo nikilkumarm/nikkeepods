@@ -28,7 +28,17 @@ export default function Navbar() {
                 className={`${styles.nav} ${scrolled ? styles.scrolled : ''} ${isLightPage ? styles.lightPage : ''} ${mobileMenuOpen ? styles.menuOpen : ''}`}
             >
                 <div className={styles.container}>
-                    <Link href="/" className={styles.logo} onClick={() => setMobileMenuOpen(false)}>
+                    <Link
+                        href="/"
+                        className={styles.logo}
+                        onClick={(e) => {
+                            setMobileMenuOpen(false);
+                            if (pathname === '/') {
+                                e.preventDefault();
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                            }
+                        }}
+                    >
                         NikkeePods
                     </Link>
 
