@@ -77,24 +77,12 @@ export default function ValuesSection() {
                                 <h3 className={styles.cardTitle}>{item.title}</h3>
                                 <p className={styles.cardDescription}>{item.description}</p>
                             </div>
-                        </motion.div>
-                    ))}
-                </div>
-
-                <div className={styles.linksGrid}>
-                    {values.map((item, index) => (
-                        <motion.div
-                            key={`link-${index}`}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.3 + index * 0.1 }}
-                            className={styles.linkWrapper}
-                        >
-                            <Link href={item.url} className={styles.link}>
-                                {item.link}
-                                <span className={styles.chevron}> ›</span>
-                            </Link>
+                            <div className={styles.linkWrapper}>
+                                <Link href={item.url} className={styles.link}>
+                                    {item.link}
+                                    <span className={styles.chevron}> ›</span>
+                                </Link>
+                            </div>
                         </motion.div>
                     ))}
                 </div>

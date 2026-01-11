@@ -48,12 +48,14 @@
 }
 
 .card {
-    padding: 3.5rem 2.5rem 2rem;
+    padding: 3.5rem 2.5rem 5rem;
+    /* Added bottom padding for link space */
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     position: relative;
     transition: transform 0.3s ease;
+    height: 100%;
 }
 
 .card:not(:last-child)::after {
@@ -61,8 +63,8 @@
     position: absolute;
     right: 0;
     top: 4%;
-    bottom: -100px;
-    /* Extended down as requested */
+    bottom: 4%;
+    /* Confined to card height */
     width: 1px;
     background: #d2d2d7;
 }
@@ -114,16 +116,11 @@
     text-align: left;
 }
 
-.linksGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-    margin-top: -3rem;
-}
-
 .linkWrapper {
-    padding: 0 2.5rem 3.5rem;
-    display: flex;
+    position: absolute;
+    bottom: 3.5rem;
+    left: 2.5rem;
+    right: 2.5rem;
 }
 
 .link {
@@ -176,20 +173,20 @@
         margin-top: 0;
     }
 
-    .grid {
-        margin-top: 2rem;
-        gap: 0;
-    }
-
     .card {
-        padding: 2.5rem 1.5rem 1rem;
-        /* Reduce bottom padding */
+        padding: 2.5rem 1.5rem 2rem;
+        /* Adjusted padding */
         border-bottom: 1px solid #d2d2d7;
-        gap: 1rem;
+        gap: 1.5rem;
+        height: auto;
     }
 
     .linkWrapper {
-        padding: 0 1.5rem 2.5rem;
-        justify-content: flex-start;
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        padding: 0;
+        margin-top: 0.5rem;
     }
 }
