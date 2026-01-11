@@ -185,8 +185,8 @@
     }
 
     .subtext {
-        bottom: 18vh;
-        /* Moved slightly up from 15vh */
+        bottom: 22vh;
+        /* Moved slightly up from 18vh */
         font-size: 0.875rem;
         width: 100%;
         text-align: center;
