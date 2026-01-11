@@ -101,7 +101,7 @@ const cardVariants = {
         scale: 1,
         transition: {
             duration: 0.8,
-            ease: [0.34, 1.56, 0.64, 1]
+            ease: [0.34, 1.56, 0.64, 1] as [number, number, number, number]
         }
     }
 };
@@ -124,7 +124,7 @@ const listItemVariants = {
         x: 0,
         transition: {
             duration: 0.5,
-            ease: [0.34, 1.56, 0.64, 1]
+            ease: [0.34, 1.56, 0.64, 1] as [number, number, number, number]
         }
     }
 };
