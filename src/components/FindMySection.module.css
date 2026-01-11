@@ -62,7 +62,7 @@
     /* Base the phone on the bottom */
     position: relative;
     z-index: 1;
-    transform: translateX(120px) translateY(-30px);
+    transform: translateX(120px) translateY(-100px);
     /* Moved right and up as requested */
 }
 
