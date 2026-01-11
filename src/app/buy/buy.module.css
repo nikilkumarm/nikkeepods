@@ -228,9 +228,9 @@
     }
 
     .otherProductCard {
-        padding: 24px 16px;
+        padding: 20px 12px;
         border-radius: 18px;
-        min-height: 280px;
+        min-height: 260px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -238,10 +238,10 @@
     }
 
     .smallProductImage {
-        height: 100px;
+        height: 90px;
         width: auto;
         max-width: 100%;
-        margin-bottom: 16px;
+        margin-bottom: 12px;
         margin-top: 0;
     }
 
