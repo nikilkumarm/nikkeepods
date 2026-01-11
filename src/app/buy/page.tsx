@@ -88,12 +88,28 @@ export default function BuyPage() {
                 {/* Other Products */}
                 <motion.div
                     className={styles.otherProductsGrid}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                            opacity: 1,
+                            transition: {
+                                staggerChildren: 0.2,
+                                delayChildren: 0.4
+                            }
+                        }
+                    }}
                 >
                     {/* NikkeePods Pro 2 */}
-                    <div className={styles.otherProductCard}>
+                    <motion.div
+                        className={styles.otherProductCard}
+                        variants={{
+                            hidden: { opacity: 0, y: 30 },
+                            visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+                        }}
+                    >
                         <img
                             src="/nikkeepods/airpods-pro-2.png"
                             alt="NikkeePods Pro 2"
@@ -103,10 +119,16 @@ export default function BuyPage() {
                         <p className={styles.otherProductFeature}>Active Noise Cancellation</p>
                         <p className={styles.otherProductPrice}>$179</p>
                         <button className={styles.smallBuyBtn}>Buy</button>
-                    </div>
+                    </motion.div>
 
                     {/* NikkeePods 4 */}
-                    <div className={styles.otherProductCard}>
+                    <motion.div
+                        className={styles.otherProductCard}
+                        variants={{
+                            hidden: { opacity: 0, y: 30 },
+                            visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+                        }}
+                    >
                         <img
                             src="/nikkeepods/airpods-2.png"
                             alt="NikkeePods 4"
@@ -116,7 +138,7 @@ export default function BuyPage() {
                         <p className={styles.otherProductFeature}>&nbsp;</p>
                         <p className={styles.otherProductPrice}>$129</p>
                         <button className={styles.smallBuyBtn}>Buy</button>
-                    </div>
+                    </motion.div>
                 </motion.div>
             </div>
         </div>
