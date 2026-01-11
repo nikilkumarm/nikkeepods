@@ -21,10 +21,7 @@ export default function Navbar() {
 
     return (
         <>
-            <motion.nav
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+            <nav
                 className={`${styles.nav} ${scrolled ? styles.scrolled : ''} ${isLightPage ? styles.lightPage : ''} ${mobileMenuOpen ? styles.menuOpen : ''}`}
             >
                 <div className={styles.container}>
@@ -60,7 +57,7 @@ export default function Navbar() {
                         </div>
                     </button>
                 </div>
-            </motion.nav>
+            </nav>
 
             <motion.div
                 initial={false}

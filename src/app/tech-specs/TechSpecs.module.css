@@ -50,7 +50,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: linear-gradient(90deg, #bf5af2 0%, #ff2d55 100%);
+    background: linear-gradient(90deg, #ebebeb 0%, #000000 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -143,7 +143,7 @@
     content: '';
     position: absolute;
     inset: -2px;
-    background: linear-gradient(135deg, #bf5af2, #ff2d55);
+    background: linear-gradient(135deg, #e1e1e1, #000000);
     border-radius: 18px;
     opacity: 0;
     z-index: -1;
@@ -151,7 +151,7 @@
 }
 
 .specCard:hover .iconWrapper {
-    background: linear-gradient(135deg, #bf5af2, #ff2d55);
+    background: linear-gradient(135deg, #e1e1e1, #000000);
     color: #fff;
     transform: scale(1.08);
     box-shadow: 0 8px 24px rgba(191, 90, 242, 0.3);
@@ -198,7 +198,7 @@
     top: 0;
     width: 20px;
     height: 20px;
-    background: linear-gradient(135deg, #bf5af2, #ff2d55);
+    background: #2469ff;
     border-radius: 50%;
     display: flex;
     align-items: center;
