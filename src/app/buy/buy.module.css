@@ -216,50 +216,49 @@
 
     .otherProductsGrid {
         grid-template-columns: 1fr 1fr;
-        gap: 8px;
+        gap: 12px;
         margin-top: 30px;
     }
 
     .otherProductCard {
-        padding: 16px 4px;
-        border-radius: 12px;
-        min-height: 250px;
+        padding: 20px 8px;
+        border-radius: 16px;
+        min-height: 320px;
         justify-content: space-between;
     }
 
     .smallProductImage {
-        height: 90px;
+        height: 110px;
         width: auto;
         max-width: 100%;
-        margin-bottom: 12px;
+        margin-bottom: 16px;
     }
 
     .otherProductName {
-        font-size: 12px;
+        font-size: 15px;
         line-height: 1.3;
-        margin-bottom: 4px;
+        margin-bottom: 6px;
         word-wrap: break-word;
         max-width: 100%;
     }
 
     .otherProductFeature {
-        font-size: 10px;
-        margin-bottom: 8px;
+        font-size: 11px;
+        margin-bottom: 12px;
         min-height: 2.4em;
-        /* Reserve space for 2 lines */
     }
 
     .otherProductPrice {
-        font-size: 13px;
-        margin-bottom: 12px;
+        font-size: 15px;
+        margin-bottom: 16px;
     }
 
     .smallBuyBtn {
-        padding: 6px 12px;
-        font-size: 11px;
-        min-width: auto;
-        width: 100%;
-        max-width: 80px;
+        padding: 8px 20px;
+        font-size: 13px;
+        min-width: 80px;
+        width: auto;
+        max-width: none;
     }
 }
 
