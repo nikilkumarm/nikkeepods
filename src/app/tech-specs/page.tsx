@@ -81,41 +81,98 @@ const specCategories = [
     }
 ];
 
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+            delayChildren: 0.2
+        }
+    }
+};
+
+const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.6,
+            ease: [0.22, 1, 0.36, 1] as [number, number, number, number]
+        }
+    }
+};
+
+const listVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.05,
+            delayChildren: 0.1 // Wait for card to appear
+        }
+    }
+};
+
+const listItemVariants = {
+    hidden: { opacity: 0, x: -10 },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: { duration: 0.4 }
+    }
+};
+
 export default function TechSpecsPage() {
     return (
         <main className={styles.container}>
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
                 className={styles.header}
             >
                 <h1 className={styles.title}>Tech Specs</h1>
                 <p className={styles.subtitle}>Every detail engineered for pure performance.</p>
             </motion.div>
 
-            <div className={styles.grid}>
-                {specCategories.map((category, index) => (
+            <motion.div
+                className={styles.grid}
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+            >
+                {specCategories.map((category) => (
                     <motion.div
                         key={category.title}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        variants={cardVariants}
                         className={styles.specCard}
                     >
                         <div className={styles.iconWrapper}>
                             {category.icon}
                         </div>
                         <h2 className={styles.categoryTitle}>{category.title}</h2>
-                        <ul className={styles.specList}>
+
+                        <motion.ul
+                            className={styles.specList}
+                            variants={listVariants}
+                        // Lists will animate when parent card becomes visible
+                        >
                             {category.specs.map(spec => (
-                                <li key={spec} className={styles.specItem}>{spec}</li>
+                                <motion.li
+                                    key={spec}
+                                    className={styles.specItem}
+                                    variants={listItemVariants}
+                                >
+                                    {spec}
+                                </motion.li>
                             ))}
-                        </ul>
+                        </motion.ul>
                     </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </main>
     );
 }
