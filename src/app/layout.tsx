@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "NikkeePods",
-  description: "Experience the next gen audio with NikkeePods.",
+  description: "Experience next gen audio with NikkeePods.",
 };
 
 import Navbar from "@/components/Navbar";
