@@ -1,5 +1,5 @@
 .container {
-    min-height: 100vh;
+    min-height: 10vh;
     padding: 120px 24px;
     display: flex;
     flex-direction: column;
@@ -215,64 +215,67 @@
     }
 
     .deliveryInfo {
-        flex-direction: column;
-        gap: 12px;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
         align-items: center;
     }
 
     .otherProductsGrid {
         grid-template-columns: 1fr 1fr;
-        gap: 12px;
+        gap: 16px;
         margin-top: 30px;
     }
 
     .otherProductCard {
-        padding: 16px 12px;
-        border-radius: 20px;
-        min-height: unset;
-        aspect-ratio: 0.85;
-        /* Makes it boxy/square-like but tall enough for content */
-        justify-content: center;
-        gap: 10px;
+        padding: 24px 16px;
+        border-radius: 18px;
+        min-height: 280px;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .smallProductImage {
-        height: 80px;
+        height: 100px;
         width: auto;
         max-width: 100%;
-        margin-bottom: 8px;
+        margin-bottom: 16px;
         margin-top: 0;
     }
 
     .otherProductName {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1.2;
-        margin-bottom: 2px;
+        margin-bottom: 4px;
         word-wrap: break-word;
         max-width: 100%;
+        text-align: center;
+        font-weight: 600;
     }
 
     .otherProductFeature {
-        font-size: 10px;
-        margin-bottom: 6px;
-        min-height: 2.4em;
+        font-size: 11px;
+        margin-bottom: 12px;
+        text-align: center;
+        line-height: 1.3;
+        color: #86868b;
     }
 
     .otherProductPrice {
-        font-size: 13px;
-        margin-bottom: 8px;
+        font-size: 14px;
+        margin-bottom: 16px;
+        font-weight: 400;
     }
 
     .smallBuyBtn {
-        padding: 6px 16px;
-        font-size: 12px;
-        min-width: 70px;
+        padding: 8px 20px;
+        font-size: 13px;
+        min-width: 80px;
         width: auto;
         max-width: none;
-        margin-top: auto;
-        /* Pushes button to bottom if space allows */
+        margin-top: 0;
     }
 }
 
