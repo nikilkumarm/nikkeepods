@@ -12,11 +12,12 @@ import {
     Smartphone
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
 
 const specCategories = [
     {
         title: "Audio Technology",
-        icon: <Volume2 size={24} />,
+        icon: <Volume2 size={28} />,
         specs: [
             "Custom high-excursion Nikkee driver",
             "Custom high dynamic range amplifier",
@@ -28,7 +29,7 @@ const specCategories = [
     },
     {
         title: "Sensors",
-        icon: <Activity size={24} />,
+        icon: <Activity size={28} />,
         specs: [
             "Dual beamforming microphones",
             "Inward-facing microphone",
@@ -40,7 +41,7 @@ const specCategories = [
     },
     {
         title: "System & Chip",
-        icon: <Cpu size={24} />,
+        icon: <Cpu size={28} />,
         specs: [
             "Nikkee H3 headphone chip",
             "Nikkee U2 chip in MagSafe Charging Case",
@@ -51,7 +52,7 @@ const specCategories = [
     },
     {
         title: "Battery & Power",
-        icon: <Battery size={24} />,
+        icon: <Battery size={28} />,
         specs: [
             "Up to 8 hours of listening time (ANC on)",
             "Total 40 hours with MagSafe Charging Case",
@@ -61,7 +62,7 @@ const specCategories = [
     },
     {
         title: "Connectivity",
-        icon: <Bluetooth size={24} />,
+        icon: <Bluetooth size={28} />,
         specs: [
             "Bluetooth 5.4 wireless technology",
             "Seamless pairing across all Nikkee devices",
@@ -71,7 +72,7 @@ const specCategories = [
     },
     {
         title: "Case & Design",
-        icon: <Smartphone size={24} />,
+        icon: <Smartphone size={28} />,
         specs: [
             "MagSafe Charging Case with speaker for Find My",
             "IP54 sweat and water resistant (Pods and Case)",
@@ -86,20 +87,21 @@ const containerVariants = {
     visible: {
         opacity: 1,
         transition: {
-            staggerChildren: 0.1,
-            delayChildren: 0.2
+            staggerChildren: 0.15,
+            delayChildren: 0.3
         }
     }
 };
 
 const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 60, scale: 0.9 },
     visible: {
         opacity: 1,
         y: 0,
+        scale: 1,
         transition: {
-            duration: 0.6,
-            ease: [0.22, 1, 0.36, 1] as [number, number, number, number]
+            duration: 0.8,
+            ease: [0.34, 1.56, 0.64, 1]
         }
     }
 };
@@ -109,31 +111,47 @@ const listVariants = {
     visible: {
         opacity: 1,
         transition: {
-            staggerChildren: 0.05,
-            delayChildren: 0.1 // Wait for card to appear
+            staggerChildren: 0.08,
+            delayChildren: 0.2
         }
     }
 };
 
 const listItemVariants = {
-    hidden: { opacity: 0, x: -10 },
+    hidden: { opacity: 0, x: -20 },
     visible: {
         opacity: 1,
         x: 0,
-        transition: { duration: 0.4 }
+        transition: {
+            duration: 0.5,
+            ease: [0.34, 1.56, 0.64, 1]
+        }
     }
 };
 
 export default function TechSpecsPage() {
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        const card = e.currentTarget;
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+    };
+
     return (
         <main className={styles.container}>
             <motion.div
-                initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                initial={{ opacity: 0, y: 60, scale: 0.9 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+                transition={{
+                    duration: 1.2,
+                    ease: [0.34, 1.56, 0.64, 1]
+                }}
                 className={styles.header}
             >
-                <h1 className={styles.title}>Tech Specs</h1>
+                <h1 className={styles.title}>Tech Specs </h1>
                 <p className={styles.subtitle}>Every detail engineered for pure performance.</p>
             </motion.div>
 
@@ -142,13 +160,19 @@ export default function TechSpecsPage() {
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true, margin: "-100px" }}
             >
-                {specCategories.map((category) => (
+                {specCategories.map((category, index) => (
                     <motion.div
                         key={category.title}
                         variants={cardVariants}
                         className={styles.specCard}
+                        onMouseMove={handleMouseMove}
+                        whileHover={{
+                            scale: 1.02,
+                            transition: { duration: 0.3 }
+                        }}
+                        whileTap={{ scale: 0.98 }}
                     >
                         <div className={styles.iconWrapper}>
                             {category.icon}
@@ -158,7 +182,6 @@ export default function TechSpecsPage() {
                         <motion.ul
                             className={styles.specList}
                             variants={listVariants}
-                        // Lists will animate when parent card becomes visible
                         >
                             {category.specs.map(spec => (
                                 <motion.li
@@ -176,4 +199,3 @@ export default function TechSpecsPage() {
         </main>
     );
 }
-
