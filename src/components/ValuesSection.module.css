@@ -8,10 +8,9 @@
     justify-content: center;
     position: relative;
     z-index: 10;
-    margin-top: -80px;
-    /* Reduced overlap to prevent clipping */
-    box-shadow: 0 -30px 60px rgba(0, 0, 0, 0.05);
-    /* Soft shadow for layer separation */
+    margin-top: 0;
+    /* Removed overlap */
+    /* Removed box-shadow */
 }
 
 .content {
