@@ -22,7 +22,7 @@ export default function FeatureSection() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                     className={styles.card}
-                    style={{ backgroundImage: 'url(/anc.png)' }}
+                    style={{ backgroundImage: 'url(/nikkeepods/anc.png)' }}
                 >
                     <div className={styles.cardContent}>
                         <h3 className={styles.cardTitle}>Active Noise Cancellation</h3>
@@ -36,7 +36,7 @@ export default function FeatureSection() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.1 }}
                     className={styles.card}
-                    style={{ backgroundImage: 'url(/transparency.png)' }}
+                    style={{ backgroundImage: 'url(/nikkeepods/transparency.png)' }}
                 >
                     <div className={styles.cardContent}>
                         <h3 className={styles.cardTitle}>New Listening Modes</h3>
@@ -50,7 +50,7 @@ export default function FeatureSection() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className={styles.card}
-                    style={{ backgroundImage: 'url(/spatial.png)' }}
+                    style={{ backgroundImage: 'url(/nikkeepods/spatial.png)' }}
                 >
                     <div className={styles.cardContent}>
                         <h3 className={styles.cardTitle}>Personalized Spatial Audio</h3>
