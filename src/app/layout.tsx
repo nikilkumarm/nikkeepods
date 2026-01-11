@@ -15,14 +15,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "NikkeePods",
   description: "Experience the next gen audio with NikkeePods.",
-  icons: {
-    icon: [
-      { url: '/favicon.ico', type: 'image/x-icon' },
-      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
-      { url: '/favicon.ico', sizes: '16x16', type: 'image/x-icon' },
-    ],
-    apple: '/favicon.ico',
-  },
 };
 
 import Navbar from "@/components/Navbar";
