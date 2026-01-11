@@ -153,7 +153,7 @@
 .specCard:hover .iconWrapper {
     background: linear-gradient(135deg, #0071e3, #00c7be);
     color: #fff;
-    transform: scale(1.08) rotate(-3deg);
+    transform: scale(1.08);
     box-shadow: 0 8px 24px rgba(0, 113, 227, 0.3);
 }
 
